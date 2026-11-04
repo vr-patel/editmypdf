@@ -9,6 +9,8 @@ Live at **[editmypdf.dev](https://editmypdf.dev/)**, published from
 `main` by GitHub Actions; [How a change goes live](#how-a-change-goes-live) describes the path from a
 pull request to the site.
 
+![Edit My PDF — retype the text already in a PDF, sign it and download it, all in the browser](./editmypdf-demo.gif)
+
 ## Run it
 
 ```bash
