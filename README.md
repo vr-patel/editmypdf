@@ -194,4 +194,6 @@ sitemap all read from that file.
 ## Contributing and licence
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to run, test and change the editor and the site.
-Edit My PDF is released under the MIT licence; see [LICENSE](LICENSE).
+Edit My PDF is released under the MIT licence; see [LICENSE](LICENSE). MIT covers the editor's own
+code only. The third-party assets it bundles (Twemoji, the @fontsource fonts, pdf.js and pdf-lib) carry
+their own licences, listed in [src/site/Terms.tsx](src/site/Terms.tsx), which is the source of the terms page.

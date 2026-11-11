@@ -82,9 +82,51 @@ export function Terms() {
             MIT licence
           </a>
           . That licence lets you use, copy, change and share the code, and it is also the source of the
-          "as is" wording above. It is the only licence that applies to {PRODUCT.name}.
+          "as is" wording above. MIT covers {PRODUCT.name}'s own code only; third-party assets carry
+          their own licences.
         </p>
 
+        <h2>Third-party assets</h2>
+        <p>
+          The MIT licence above covers {PRODUCT.name}'s own code. {PRODUCT.name} also bundles the
+          following third-party assets, each under its own licence:
+        </p>
+        <ul>
+          <li>
+            <strong>Twemoji</strong> emoji graphics: copyright Twitter, Inc. and other contributors,
+            licensed under{" "}
+            <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" target="_blank">
+              CC-BY 4.0
+            </a>
+            . Source:{" "}
+            <a href="https://github.com/twitter/twemoji" rel="noopener noreferrer" target="_blank">
+              github.com/twitter/twemoji
+            </a>
+            .
+          </li>
+          <li>
+            <strong>Fonts</strong> from the <code>@fontsource</code> packages: Alex Brush, Allura, Amita,
+            Arimo, Caladea, Carlito, Cousine, Dancing Script, Dekko, Gelasio, Geist, Geist Mono, Great
+            Vibes, Inter, Instrument Serif, Kalam, Lato, Noto Sans, Noto Sans Mono, Noto Serif, Open Sans,
+            Pinyon Script, Roboto, Sacramento, Tangerine and Tinos. All of them are licensed under the SIL
+            Open Font License 1.1 (OFL-1.1).
+          </li>
+          <li>
+            <strong>{PRODUCT.libraries.reader.name}</strong> (PDF parsing and rendering), licensed under
+            Apache-2.0:{" "}
+            <a href={PRODUCT.libraries.reader.url} rel="noopener noreferrer" target="_blank">
+              {PRODUCT.libraries.reader.url}
+            </a>
+            .
+          </li>
+          <li>
+            <strong>{PRODUCT.libraries.writer.name}</strong> (writing the edited PDF), licensed under MIT:{" "}
+            <a href={PRODUCT.libraries.writer.url} rel="noopener noreferrer" target="_blank">
+              {PRODUCT.libraries.writer.url}
+            </a>
+            .
+          </li>
+        </ul>
         <h2>No account, nothing collected</h2>
         <p>
           There is nothing to sign up for.{" "}
