@@ -176,7 +176,7 @@ export function Pricing() {
                   <tr key={tool.slug}>
                     <th scope="row">
                       <Link to={ROUTES.comparison(tool.slug)} className="price-tool">
-                        <ToolMark brand={tool.brand} size={28} />
+                        <ToolMark brand={tool.brand} size={28} alt={`${tool.name} logo`} />
                         <span>{tool.name}</span>
                       </Link>
                     </th>

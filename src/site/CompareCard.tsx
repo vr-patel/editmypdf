@@ -124,7 +124,7 @@ export function Scorecard({ tool }: { tool: Tool }) {
           <td />
           {columns.map((column) => (
             <th key={column.tool.slug} scope="col" className={column.us ? "us" : undefined}>
-              {column.us ? <LogoMark size={22} /> : <ToolMark brand={column.tool.brand} size={22} />}
+              {column.us ? <LogoMark size={22} /> : <ToolMark brand={column.tool.brand} size={22} alt={`${column.tool.name} logo`} />}
               <span className="sr-only">{column.tool.name}</span>
             </th>
           ))}
@@ -150,12 +150,22 @@ export function Scorecard({ tool }: { tool: Tool }) {
   );
 }
 
-// One comparison as a card: the thumbnail, vendor and starting price, title, summary.
+// One comparison as a card: the thumbnail, vendor and starting price, title, summary. The
+// thumbnail's alt text says what the picture shows (the two marks with "vs" between them) rather
+// than repeating the title beneath it.
 export function CompareCard({ tool }: { tool: Competitor }) {
   return (
     <Link to={ROUTES.comparison(tool.slug)} className="cmp-card">
       {tool.brand.thumbnail ? (
-        <img className="cmp-thumb" src={publicUrl(tool.brand.thumbnail)} alt="" width={1000} height={500} loading="lazy" decoding="async" />
+        <img
+          className="cmp-thumb"
+          src={publicUrl(tool.brand.thumbnail)}
+          alt={`The ${PRODUCT.name} mark and the ${tool.name} logo side by side`}
+          width={1000}
+          height={500}
+          loading="lazy"
+          decoding="async"
+        />
       ) : (
         <Duel tool={tool} />
       )}

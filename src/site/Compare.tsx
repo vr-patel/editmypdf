@@ -132,7 +132,7 @@ export function Compare() {
                 <tr key={tool.slug}>
                   <th scope="row">
                     <Link to={ROUTES.comparison(tool.slug)} className="tool-cell">
-                      <ToolMark brand={tool.brand} size={22} />
+                      <ToolMark brand={tool.brand} size={22} alt={`${tool.name} logo`} />
                       <span>{tool.name}</span>
                     </Link>
                   </th>

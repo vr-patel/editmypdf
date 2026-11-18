@@ -75,7 +75,7 @@ function Comparison({ tool }: { tool: Competitor }) {
             <p className="cmp-versus" aria-hidden="true">
               <LogoMark size={48} />
               <span>vs</span>
-              <ToolMark brand={tool.brand} size={48} />
+              <ToolMark brand={tool.brand} size={48} alt={`${tool.name} logo`} />
             </p>
             <h1 className="display">
               {PRODUCT.name} <em>vs</em> {tool.name}
@@ -105,7 +105,7 @@ function Comparison({ tool }: { tool: Competitor }) {
                 <th scope="col">At a glance</th>
                 <th scope="col">
                   <span className="tool-cell">
-                    <ToolMark brand={tool.brand} size={18} />
+                    <ToolMark brand={tool.brand} size={18} alt={`${tool.name} logo`} />
                     <span>{tool.name}</span>
                   </span>
                 </th>
