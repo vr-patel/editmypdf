@@ -349,7 +349,7 @@ export function SiteLayout() {
             </h2>
             {FOOTER_COMPARISONS.map((tool) => (
               <Link key={tool.slug} to={ROUTES.comparison(tool.slug)} className="footer-tool">
-                <ToolMark brand={tool.brand} size={16} />
+                <ToolMark brand={tool.brand} size={16} alt={`${tool.name} logo`} />
                 <span>vs {tool.name}</span>
               </Link>
             ))}
