@@ -39,15 +39,26 @@ export function Monogram({ brand, size = 36 }: { brand: Brand; size?: number }) 
   );
 }
 
-// The tool's own icon when the data has one, the monogram otherwise. The name always sits beside
-// it, so the image is decorative.
-export function ToolMark({ brand, size = 28, className = "" }: { brand: Brand; size?: number; className?: string }) {
+// The tool's own icon when the data has one, the monogram otherwise. The name sits beside it, so
+// the image is decorative unless the caller gives it words: a table or list that names each tool
+// passes "<name> logo", so no image on the page is left without alt text.
+export function ToolMark({
+  brand,
+  size = 28,
+  className = "",
+  alt = "",
+}: {
+  brand: Brand;
+  size?: number;
+  className?: string;
+  alt?: string;
+}) {
   if (!brand.logo) return <Monogram brand={brand} size={size} />;
   return (
     <img
       className={`tool-mark ${className}`.trim()}
       src={publicUrl(brand.logo)}
-      alt=""
+      alt={alt}
       width={size}
       height={size}
       loading="lazy"

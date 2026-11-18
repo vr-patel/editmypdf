@@ -37,7 +37,7 @@ function Comparison({ tool }: { tool: Competitor }) {
     // The name is already in the title, so no " — Edit My PDF" suffix.
     title: `${title}: where files go, what is free, fonts`,
     titleSuffix: false,
-    description: `${tool.name} compared with ${PRODUCT.name}: where files are processed, free limits, pricing, and whether editing text keeps the original font. Facts checked ${tool.checkedAt}.`,
+    description: `${tool.name} vs ${PRODUCT.name}: where files are processed, what is free, pricing and whether edits keep the page's font. Checked ${tool.checkedAt}.`,
     keywords: [`${tool.name} alternative`, `${tool.name} vs ${PRODUCT.name}`, `${tool.name} pricing`, "edit PDF text free", "PDF editor comparison"],
     jsonLd: [
       breadcrumbs([

@@ -725,7 +725,7 @@ export const POSTS: Post[] = [
     slug: "scans-cjk-text-and-colour-profiles",
     title: "Now open as intended: scans, Chinese, Japanese and Korean text, and colour profiles",
     description:
-      "Scanned pages, Chinese, Japanese and Korean text and ICC colour now open as the file intends, and still nothing leaves this site. What changed, how it works, and the one-byte font bug I found on the way.",
+      "Scanned pages, Chinese, Japanese and Korean text and ICC colour now open as the file intends, and nothing leaves this site. What changed, and how.",
     date: "2026-11-09",
     tags: ["release", "pdf", "privacy"],
     keywords: [
@@ -779,7 +779,7 @@ export const POSTS: Post[] = [
     slug: "sign-pdf-online-free-without-uploading",
     title: "How to sign a PDF online for free, without uploading it",
     description:
-      "Add a typed or uploaded signature to a PDF in about a minute, free, with no account and no upload. Also: electronic versus digital signatures, and a one-minute way to check any tool's privacy claims.",
+      "Add a typed or uploaded signature to a PDF in a minute, free, with no account and no upload. Plus a one-minute check of any tool's privacy claims.",
     date: "2026-11-04",
     tags: ["how-to", "privacy", "signatures"],
     keywords: [
@@ -805,7 +805,7 @@ export const POSTS: Post[] = [
     slug: "exporting-real-text",
     title: "Exporting edits as real text, in the page's own font",
     description:
-      "How Edit My PDF removes the original strings from a page's content stream, embeds a subset of the font pdf.js decoded, and writes your edit as positioned text rather than a picture.",
+      "How Edit My PDF removes the original strings from the content stream, subsets the page's font and writes your edit as positioned text, not a picture.",
     date: "2026-10-28",
     tags: ["export", "fonts", "pdf-lib"],
     cover: { glyph: "Tj", hue: "accent" },
@@ -839,7 +839,7 @@ export const POSTS: Post[] = [
     slug: "mixed-face-paragraphs",
     title: "Editing a paragraph that mixes bold, italic and regular as one block",
     description:
-      "A textarea holds one font. A paragraph with a bold lead-in needs a contentEditable editor that owns its DOM, maps every edit into styled spans and keeps the page's line layout.",
+      "A textarea holds one font. A paragraph with a bold lead-in needs an editor that owns its DOM, maps edits into styled spans and keeps the page's lines.",
     date: "2026-10-14",
     tags: ["editor", "fonts"],
     cover: { glyph: "Aa", hue: "violet" },
@@ -856,7 +856,7 @@ export const POSTS: Post[] = [
     slug: "exactly-as-the-page-prints-it",
     title: "Opening an element exactly as the page prints it",
     description:
-      "Fitting every run and line to its printed width, keeping a block's own baselines and breaks, measuring the baseline in the browser, and reading colour from the pixels.",
+      "Fitting each line to its printed width, keeping a block's baselines and breaks, measuring the baseline in the browser and reading colour from pixels.",
     date: "2026-10-07",
     tags: ["fidelity", "layout"],
     cover: { glyph: "Tw", hue: "teal" },
@@ -873,7 +873,7 @@ export const POSTS: Post[] = [
     slug: "nothing-leaves-your-browser",
     title: "Nothing leaves your browser: how Edit My PDF is built",
     description:
-      "pdf.js in a web worker, pdf-lib for writing, IndexedDB for storage and no server at all. What that architecture buys, what it costs, and how to check it yourself.",
+      "pdf.js in a web worker, pdf-lib for writing, IndexedDB for storage and no server at all: what that buys, what it costs, and how to check it yourself.",
     date: "2026-09-30",
     tags: ["privacy", "architecture"],
     cover: { glyph: "{ }", hue: "teal" },
@@ -890,7 +890,7 @@ export const POSTS: Post[] = [
     slug: "why-editing-pdf-text-is-hard",
     title: "Why editing text inside a PDF is hard",
     description:
-      "No paragraphs, subset fonts with no space glyph, spacing operators that leak, phantom spaces, mixed faces and browsers that round: the real reasons a click can shift a line.",
+      "No paragraphs, fonts with no space glyph, spacing operators that leak, phantom spaces, mixed faces and browsers that round: why a click shifts a line.",
     date: "2026-09-16",
     tags: ["fonts", "pdf"],
     cover: { glyph: "¶", hue: "violet" },

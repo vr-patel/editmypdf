@@ -184,9 +184,12 @@ function Showcase({
 export function Landing() {
   const questions = FAQ.slice(0, 4);
   useMeta({
-    // Keyword first for the results page, with the name as the usual suffix; the H1 keeps the tagline.
-    title: "Edit text in a PDF online: free PDF text editor",
-    description: PRODUCT.description,
+    // Keyword first for the results page, with the name as the usual suffix, 60 characters together
+    // at most; the H1 keeps the tagline.
+    title: "Edit text in a PDF online, free, no upload",
+    // Its own description rather than PRODUCT.description, which runs past what a results page
+    // shows: this one stays under 150 characters.
+    description: "Edit text in a PDF for free, in your browser, with no upload. Click a line, retype it in the page's own font and download. No account, no watermark.",
     keywords: [
       "edit PDF text",
       "free PDF editor",
