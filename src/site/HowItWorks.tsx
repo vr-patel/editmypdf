@@ -232,7 +232,7 @@ function StepStrip() {
 export function HowItWorks() {
   useMeta({
     title: "How it works",
-    description: `How ${PRODUCT.name} reads a PDF, makes its fonts typeable, fits every line to its printed width, and writes edits back as real text, all inside the browser.`,
+    description: `How ${PRODUCT.name} reads a PDF, makes its fonts typeable, fits each line to its printed width and writes edits back as real text, all in the browser.`,
     keywords: ["how PDF editing works", "edit PDF in browser", "pdf.js", "embedded fonts", "content stream"],
     jsonLd: {
       "@context": "https://schema.org",

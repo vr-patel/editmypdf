@@ -44,7 +44,7 @@ function stats() {
 export function Compare() {
   useMeta({
     title: "Compare PDF editors",
-    description: `${PRODUCT.name} against iLovePDF, Smallpdf, Adobe Acrobat online, Sejda, PDF24, pdfFiller, Foxit, Canva, Xodo and others: where files are processed, what is free, and whether text edits keep the original font. Checked ${PRODUCT.comparisonsCheckedAt}.`,
+    description: `${COMPETITORS.length} PDF editors against ${PRODUCT.name}: where files are processed, what is free and whether text edits keep the original font. Checked ${PRODUCT.comparisonsCheckedAt}.`,
   });
   return (
     <>
@@ -132,7 +132,7 @@ export function Compare() {
                 <tr key={tool.slug}>
                   <th scope="row">
                     <Link to={ROUTES.comparison(tool.slug)} className="tool-cell">
-                      <ToolMark brand={tool.brand} size={22} />
+                      <ToolMark brand={tool.brand} size={22} alt={`${tool.name} logo`} />
                       <span>{tool.name}</span>
                     </Link>
                   </th>

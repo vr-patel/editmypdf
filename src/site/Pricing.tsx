@@ -61,7 +61,7 @@ const ACCOUNT_WORDS: Partial<Record<Tri, string>> = { yes: "Required", no: "None
 export function Pricing() {
   useMeta({
     title: "Pricing",
-    description: `${PRODUCT.name} is free: no tiers, no trial, no watermark and no file size limit. What is included, and what other PDF editors charge for the same editing.`,
+    description: `${PRODUCT.name} is free: no tiers, no trial, no watermark and no file size limit. What is included, and what other PDF editors charge for the same edits.`,
     keywords: ["free PDF editor", "PDF editor pricing", "edit PDF text free", "no watermark PDF editor"],
     jsonLd: [
       {
@@ -176,7 +176,7 @@ export function Pricing() {
                   <tr key={tool.slug}>
                     <th scope="row">
                       <Link to={ROUTES.comparison(tool.slug)} className="price-tool">
-                        <ToolMark brand={tool.brand} size={28} />
+                        <ToolMark brand={tool.brand} size={28} alt={`${tool.name} logo`} />
                         <span>{tool.name}</span>
                       </Link>
                     </th>

@@ -24,7 +24,7 @@ export function faqJsonLd(entries: typeof FAQ): Record<string, unknown> {
 export function Faq() {
   useMeta({
     title: "Frequently asked questions",
-    description: `Answers about ${PRODUCT.name}: whether files are uploaded, what can be edited, what the exported PDF contains, where documents are stored, and what the editor cannot do.`,
+    description: `Answers about ${PRODUCT.name}: whether files are uploaded, what can be edited, what the download contains, where documents live and what it cannot do.`,
     keywords: ["PDF editor FAQ", "edit PDF text", "is it free", "does it upload my PDF"],
     jsonLd: faqJsonLd(FAQ),
   });

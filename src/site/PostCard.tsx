@@ -7,8 +7,9 @@ import "./blog.css";
 
 // A post's cover: the scene drawn for it by scripts/blog-cards.mjs when it has one (the same
 // picture as its link preview, without the title, which the card sets below), otherwise a page on
-// a tinted ground with the post's glyph set large in the display face. The drawn fallback is SVG,
-// so it is crisp at any size and takes its colours from the theme.
+// a tinted ground with the post's glyph set large in the display face. The picture carries the link
+// preview's alt text, which describes the scene rather than repeating the title. The drawn
+// fallback is SVG, so it is crisp at any size and takes its colours from the theme.
 export function PostCover({
   post,
   className = "post-cover",
@@ -25,7 +26,7 @@ export function PostCover({
       <img
         className={`${className} post-cover-image`}
         src={publicUrl(post.thumbnail)}
-        alt=""
+        alt={post.image?.alt ?? `Cover picture for the post "${post.title}"`}
         width={1200}
         height={600}
         loading={loading}

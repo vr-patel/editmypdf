@@ -39,15 +39,26 @@ export function Monogram({ brand, size = 36 }: { brand: Brand; size?: number }) 
   );
 }
 
-// The tool's own icon when the data has one, the monogram otherwise. The name always sits beside
-// it, so the image is decorative.
-export function ToolMark({ brand, size = 28, className = "" }: { brand: Brand; size?: number; className?: string }) {
+// The tool's own icon when the data has one, the monogram otherwise. The name sits beside it, so
+// the image is decorative unless the caller gives it words: a table or list that names each tool
+// passes "<name> logo", so no image on the page is left without alt text.
+export function ToolMark({
+  brand,
+  size = 28,
+  className = "",
+  alt = "",
+}: {
+  brand: Brand;
+  size?: number;
+  className?: string;
+  alt?: string;
+}) {
   if (!brand.logo) return <Monogram brand={brand} size={size} />;
   return (
     <img
       className={`tool-mark ${className}`.trim()}
       src={publicUrl(brand.logo)}
-      alt=""
+      alt={alt}
       width={size}
       height={size}
       loading="lazy"
@@ -113,7 +124,7 @@ export function Scorecard({ tool }: { tool: Tool }) {
           <td />
           {columns.map((column) => (
             <th key={column.tool.slug} scope="col" className={column.us ? "us" : undefined}>
-              {column.us ? <LogoMark size={22} /> : <ToolMark brand={column.tool.brand} size={22} />}
+              {column.us ? <LogoMark size={22} /> : <ToolMark brand={column.tool.brand} size={22} alt={`${column.tool.name} logo`} />}
               <span className="sr-only">{column.tool.name}</span>
             </th>
           ))}
@@ -139,12 +150,22 @@ export function Scorecard({ tool }: { tool: Tool }) {
   );
 }
 
-// One comparison as a card: the thumbnail, vendor and starting price, title, summary.
+// One comparison as a card: the thumbnail, vendor and starting price, title, summary. The
+// thumbnail's alt text says what the picture shows (the two marks with "vs" between them) rather
+// than repeating the title beneath it.
 export function CompareCard({ tool }: { tool: Competitor }) {
   return (
     <Link to={ROUTES.comparison(tool.slug)} className="cmp-card">
       {tool.brand.thumbnail ? (
-        <img className="cmp-thumb" src={publicUrl(tool.brand.thumbnail)} alt="" width={1000} height={500} loading="lazy" decoding="async" />
+        <img
+          className="cmp-thumb"
+          src={publicUrl(tool.brand.thumbnail)}
+          alt={`The ${PRODUCT.name} mark and the ${tool.name} logo side by side`}
+          width={1000}
+          height={500}
+          loading="lazy"
+          decoding="async"
+        />
       ) : (
         <Duel tool={tool} />
       )}
